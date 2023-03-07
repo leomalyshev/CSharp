@@ -7,7 +7,3 @@ if (result>1)
     Console.Write(digit%10);
 }
 else Console.WriteLine("Sorry, dude");
-
-
-
-
