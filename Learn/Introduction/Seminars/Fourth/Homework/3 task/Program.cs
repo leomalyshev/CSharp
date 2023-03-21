@@ -21,4 +21,3 @@ void PrintArray(string[] array)
     numbers[parts.Length-1] = Convert.ToInt32(parts[parts.Length-1]);
     Console.Write($"{numbers[parts.Length-1]}]");
 }
-    
