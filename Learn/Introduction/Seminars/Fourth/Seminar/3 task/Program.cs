@@ -55,8 +55,7 @@ void PrintArray(int[] array)
     {
         Console.Write(num);
         Console.Write(" ");
-    }
-        
+    }   
 }
 
 int[] FillArray(int num)
