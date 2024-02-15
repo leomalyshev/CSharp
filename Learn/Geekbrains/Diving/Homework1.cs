@@ -7,7 +7,7 @@
         static int Multiply(int x, int y) => x * y;
         static int Subtract(int x, int y) => x - y;
         static int Divide(int x, int y) => x / y;
-        static void Main(string[] args)
+        static void Main1(string[] args)
         {
             if (args.Length < 3)
             {
