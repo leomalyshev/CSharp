@@ -10,7 +10,14 @@ namespace Diving
     {
         static void Main(string[] args)
         {
-            int[,] a = { { 7, 3, 2 }, { 4, 9, 6 }, { 1, 8, 5 } };
+            int[][] df;
+
+            int[,] a = { 
+                { 7, 3, 2 }, 
+                { 4, 9, 6 }, 
+                { 1, 8, 5 }
+            };
+
 
             int pastMin = int.MinValue;
 
