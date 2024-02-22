@@ -1,27 +1,93 @@
-﻿namespace OOP
+﻿using OOP.Model.Service;
+
+namespace OOP
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            AdultFamilyMember grandFather = new AdultFamilyMember() { Mother = null, Name = "Боб" };
-            
-            AdultFamilyMember mother = new AdultFamilyMember() { Father = grandFather, Mother = null, Name = "Юлия", Sex = Gender.female};
-            AdultFamilyMember father = new AdultFamilyMember() { Father = grandFather, Mother = null, Name = "Сергей", Sex = Gender.male};
-            
-            FamilyMember son1 = new FamilyMember() { Mother = mother, Father = father, Name = "Василий" };
-            FamilyMember son2 = new FamilyMember() { Mother = mother, Father = father, Name = "Илья" };
-            FamilyMember son3 = new FamilyMember() { Mother = mother, Father = father, Name = "Артём" };
+            var grandMother1 = new FamilyMember()
+            {
+                Name = "Мария",
+                Surname = "Иванова",
+                Birthday = new DateTime(1975, 8, 17),
+                Gender = Gender.male
+            };
+            var grandFather1 = new FamilyMember()
+            {
+                Name = "Алексей",
+                Surname = "Иванов",
+                Birthday = new DateTime(1973, 5, 23),
+                Gender = Gender.male
+            };
+            var grandMother2 = new FamilyMember()
+            {
+                Name = "Ольга",
+                Surname = "Петрова",
+                Birthday = new DateTime(1976, 8, 11),
+                Gender = Gender.male
+            };
+            var grandFather2 = new FamilyMember()
+            {
+                Name = "Даниил",
+                Surname = "Петров",
+                Birthday = new DateTime(1972, 6, 12),
+                Gender = Gender.male
+            };
+            var father = new FamilyMember() { 
+                Name = "Иван", 
+                Surname = "Иванов", 
+                Birthday = new DateTime(1993, 5, 2),
+                Gender = Gender.male,
+                Mother = grandMother1,
+                Father = grandFather1
+            };
+            var mother = new FamilyMember()
+            {
+                Name = "Дарья",
+                Surname = "Иванова",
+                Birthday = new DateTime(1995, 6, 2),
+                Gender = Gender.female,
+                Mother = grandMother2,
+                Father = grandFather2
+            };
+            var child1 = new FamilyMember()
+            {
+                Name = "Михаил",
+                Surname = "Иванов",
+                Birthday = new DateTime(2005, 6, 3),
+                Gender = Gender.male,
+                Mother = mother,
+                Father = father
+            };
+            var child2 = new FamilyMember()
+            {
+                Name = "Дарья",
+                Surname = "Иванова",
+                Birthday = new DateTime(2006, 8, 3),
+                Gender = Gender.female,
+                Mother = mother,
+                Father = father
+            };
 
-            grandFather.Children = new FamilyMember[] { father, mother };
-            mother.Children = new FamilyMember[] { son1, son2, son3 };
-            father.Children = new FamilyMember[] { son1, son2, son3 };
+            var service = new Service();
+            service.AddPerson(
+                grandFather1, 
+                grandFather2, 
+                grandMother1, 
+                grandMother2,
+                father,
+                mother,
+                child1,
+                child2);
 
-            mother.MarriedFamilyMember = father;
-            father.MarriedFamilyMember = mother;
+            var grandFathers = service.GetGrandFather(child2);
+            foreach (var grandFather in grandFathers)
+            {
+                Console.WriteLine(grandFather);
+            }
 
-            grandFather.Print(2);
-            Console.ReadLine();
+            Console.WriteLine(service.FindOldestFamilyMember(child2));
         }
     }
 }

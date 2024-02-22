@@ -5,7 +5,9 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diving", "Diving.csproj", "{A25278B1-A4C8-4647-AFC4-8F1F77991489}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOP", "..\OOP\OOP.csproj", "{F2C3ECA2-606D-4637-A2D5-56BFCE7DDC44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP", "..\OOP\OOP.csproj", "{F2C3ECA2-606D-4637-A2D5-56BFCE7DDC44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seminar2", "..\Seminar2\Seminar2.csproj", "{6277EAD3-C8DD-4EFA-A403-10B35B2F8125}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{F2C3ECA2-606D-4637-A2D5-56BFCE7DDC44}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2C3ECA2-606D-4637-A2D5-56BFCE7DDC44}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2C3ECA2-606D-4637-A2D5-56BFCE7DDC44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6277EAD3-C8DD-4EFA-A403-10B35B2F8125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6277EAD3-C8DD-4EFA-A403-10B35B2F8125}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6277EAD3-C8DD-4EFA-A403-10B35B2F8125}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6277EAD3-C8DD-4EFA-A403-10B35B2F8125}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
