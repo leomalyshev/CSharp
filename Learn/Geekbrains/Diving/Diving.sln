@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diving", "Diving.csproj", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP", "..\OOP\OOP.csproj", "{F2C3ECA2-606D-4637-A2D5-56BFCE7DDC44}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seminar2", "..\Seminar2\Seminar2.csproj", "{6277EAD3-C8DD-4EFA-A403-10B35B2F8125}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seminar2", "..\Seminar2\Seminar2.csproj", "{6277EAD3-C8DD-4EFA-A403-10B35B2F8125}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seminar3", "..\Seminar3\Seminar3.csproj", "{E002AD0D-F1F2-402B-A7A1-DDCF2319EA4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{6277EAD3-C8DD-4EFA-A403-10B35B2F8125}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6277EAD3-C8DD-4EFA-A403-10B35B2F8125}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6277EAD3-C8DD-4EFA-A403-10B35B2F8125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E002AD0D-F1F2-402B-A7A1-DDCF2319EA4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E002AD0D-F1F2-402B-A7A1-DDCF2319EA4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E002AD0D-F1F2-402B-A7A1-DDCF2319EA4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E002AD0D-F1F2-402B-A7A1-DDCF2319EA4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
