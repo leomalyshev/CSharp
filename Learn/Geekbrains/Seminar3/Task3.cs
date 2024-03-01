@@ -37,7 +37,7 @@ namespace Seminar3
 {
     internal class Task3
     {
-        static void Main(string[] args)
+        static void Main3(string[] args)
         {
             int[,] labirynth = new int[,]
             {
