@@ -8,7 +8,7 @@ namespace Seminar3
 {
     internal class Task8
     {
-        static void Main(string[] args)
+        static void Main8(string[] args)
         {
             int[] arr = { 1, 2, 3, 44, 5, 6, 7, 8, 9, 10, 11 };
 
