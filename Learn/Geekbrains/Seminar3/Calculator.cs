@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
@@ -34,11 +36,16 @@ namespace Seminar3
 
         public void Add(double number)
         {
+
             Result += number;
         }
 
         public void Divide(double number)
         {
+            if (number == 0)
+            {
+                throw new CalculatorDivideByZeroException("Деление на ноль");
+            }
             Result /= number;
         }
 

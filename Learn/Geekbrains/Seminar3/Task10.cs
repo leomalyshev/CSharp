@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Seminar3
 {
@@ -12,40 +14,55 @@ namespace Seminar3
         {
             var calc = new Calculator();
             calc.GotResult += Calculator_GotResult;
-
-            //Console.WriteLine("Введите число");
-            //int.TryParse(Console.ReadLine(), out int firstValue);
-
             bool isCancel = false;
 
-            while (!isCancel)
-            {
-                Console.WriteLine("Введите операнд");
-                var operand = Console.ReadLine();
-                Console.WriteLine("Введите число");
-                int.TryParse(Console.ReadLine(), out int secondValue);
+            CalculatorActionLog calculatorActionLog = new CalculatorActionLog();
 
-                switch (operand)
+            try
+            {
+                while (!isCancel)
                 {
-                    case "+":
-                        calc.Add(secondValue);
-                        break;
-                    case "-":
-                        calc.Subtract(secondValue);
-                        break;
-                    case "/":
-                        calc.Divide(secondValue);
-                        break;
-                    case "*":
-                        calc.Multiply(secondValue);
-                        break;
-                    case " ":
-                        isCancel = true;
-                        break;
-                    default:
-                        Console.WriteLine("Введен некорректный операнд или число");
-                        break;
+                    Console.WriteLine("Введите операнд");
+                    var operand = Console.ReadLine();
+                    Console.WriteLine("Введите число");
+                    double.TryParse(Console.ReadLine(), out double secondValue);
+
+                    calculatorActionLog.AddLog(secondValue, operand);
+
+                    switch (operand)
+                    {
+                        case "+":
+                            calc.Add(secondValue);
+                            break;
+                        case "-":
+                            calc.Subtract(secondValue);
+                            break;
+                        case "/":
+                            calc.Divide(secondValue);
+                            break;
+                        case "*":
+                            calc.Multiply(secondValue);
+                            break;
+                        case " ":
+                            isCancel = true;
+                            break;
+                        default:
+                            Console.WriteLine("Введен некорректный операнд или число");
+                            break;
+                    }
                 }
+            }
+            catch (CalculatorDivideByZeroException ex)
+            {
+                Console.WriteLine(ex.Message + calculatorActionLog.GetLog());
+            }
+            catch (CalculateOperationCauseOverflowException ex)
+            {
+                Console.WriteLine(ex.Message + calculatorActionLog.GetLog());
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message + calculatorActionLog.GetLog());
             }
         }
 
