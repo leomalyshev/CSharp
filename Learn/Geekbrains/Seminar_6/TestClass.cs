@@ -15,6 +15,9 @@ namespace Seminar_6
         public string? S { get; set; }
         public decimal D { get; set; }
 
+        [CustomName("CustomFieldName")]
+        public string F = "Hello";
+
         public TestClass(int i)
         {
             I = i;

@@ -77,6 +77,19 @@ namespace Seminar_6
                 }
             }
 
+            var fields = type.GetFields();
+            foreach (var field in fields)
+            {
+                var attribute = field.GetCustomAttribute<CustomNameAttribute>();
+                if ( attribute!= null)
+                {
+                    sb.Append(attribute.CustomName + "=");
+                    var fieldVal = field.GetValue(o);
+                    sb.Append(fieldVal + "\n");
+                }
+            }
+
+
             return sb.ToString();
         }
 
@@ -102,9 +115,10 @@ namespace Seminar_6
             var t3 = Activator.CreateInstance(type, [10, new[] { 'A', 'B', 'C' }, "Hello", 10.01m]);
 
             string objectToString = ObjectToString(t3);
-            var obj = StringToObject(objectToString);
-            string objectToString2 = ObjectToString(obj);
-            var obj2 = StringToObject(objectToString2);
+            Console.WriteLine(objectToString);
+            //var obj = StringToObject(objectToString);
+            //string objectToString2 = ObjectToString(obj);
+            //var obj2 = StringToObject(objectToString2);
         }
     }
 }
