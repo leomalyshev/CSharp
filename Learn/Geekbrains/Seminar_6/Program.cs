@@ -19,7 +19,7 @@ namespace Seminar_6
 
             var t4 = Activator.CreateInstance(null, arrayInfo[1]).Unwrap();
 
-
+            //TODO: Сделать так, чтобы и поле можно было обрабатывать
             if (t4 != null && arrayInfo.Length > 2)
             {
                 Type type = t4.GetType();
@@ -28,6 +28,7 @@ namespace Seminar_6
                 {
                     string[] arrayInfo2 = arrayInfo[i].Split("=");
                     var prop = type.GetProperty(arrayInfo2[0]);
+
                     if (prop == null) continue;
                     if (prop.PropertyType == typeof(int))
                     {
@@ -112,11 +113,11 @@ namespace Seminar_6
         {
             Type type = typeof(TestClass);
 
-            var t3 = Activator.CreateInstance(type, [10, new[] { 'A', 'B', 'C' }, "Hello", 10.01m]);
+            var t3 = Activator.CreateInstance(type, [10, new[] { 'A', 'B', 'C' }, "Hello", 10.01m, "Hi"]);
 
             string objectToString = ObjectToString(t3);
             Console.WriteLine(objectToString);
-            //var obj = StringToObject(objectToString);
+            var obj = StringToObject(objectToString);
             //string objectToString2 = ObjectToString(obj);
             //var obj2 = StringToObject(objectToString2);
         }

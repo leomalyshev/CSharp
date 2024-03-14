@@ -27,11 +27,12 @@ namespace Seminar_6
         {
         }
 
-        public TestClass(int i,char[]? c, string? s, decimal d) : this(i)
+        public TestClass(int i,char[]? c, string? s, decimal d, string f) : this(i)
         {
             C = c;
             S = s;
             D = d;
+            F = f;
         }
 
       
