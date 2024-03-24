@@ -30,6 +30,7 @@ namespace UdpApp
             Console.WriteLine("Сервер ждет сообщения от клиента");
 
 
+
             while (true)
             {
                 byte[] buffer = client.Receive(ref ep);
