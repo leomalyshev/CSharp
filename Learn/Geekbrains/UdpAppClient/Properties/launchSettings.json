@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "UdpAppClient": {
+      "commandName": "Project",
+      "commandLineArgs": "Leonid 127.0.0.1"
+    }
+  }
+}
