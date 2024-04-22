@@ -1,4 +1,8 @@
+using Microsoft.EntityFrameworkCore;
 using SocketChat.BLL.Logic;
+using SocketChat.DAL.Repositories;
+
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +14,12 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSignalR();
 builder.Services.AddScoped<IUserLogic, UserLogic>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+
+string? connection = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<ChatContext>(options =>
+    options.UseNpgsql(connection));
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

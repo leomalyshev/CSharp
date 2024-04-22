@@ -16,9 +16,10 @@ namespace SocketChat.Controllers
         {
             _userLogic = userLogic;
         }
+
         // GET: api/<UserController>
         [HttpGet]
-        public async Task<IEnumerable<User>> GetAsync()
+        public async Task<List<User>> GetAsync()
         {
             return await _userLogic.GetAllAsync();
         }
@@ -30,6 +31,5 @@ namespace SocketChat.Controllers
             await _userLogic.AddAsync(user);
             return Ok();
         }
-
     }
 }

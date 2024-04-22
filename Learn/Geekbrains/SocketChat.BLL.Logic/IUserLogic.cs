@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 namespace SocketChat.BLL.Logic
 {
     public interface IUserLogic
-    {
-        List<User> GetAll();
-        void Add(User user);
-        Task<IEnumerable<User>> GetAllAsync();
+    {        //List<User> GetAll();
+        //void Add(User user);
+
+        Task<List<User>> GetAllAsync();
         Task AddAsync(User user);
     }
 }

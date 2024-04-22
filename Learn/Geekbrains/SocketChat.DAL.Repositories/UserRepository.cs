@@ -1,29 +1,46 @@
-﻿using SocketChat.Common.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using SocketChat.Common.Entities;
 
 namespace SocketChat.DAL.Repositories
 {
-    public static class UserRepository
+    public class UserRepository : IUserRepository
     {
-        private static List<User> users = new List<User>();
+        private readonly ChatContext _chatContext;
+        //private static List<User> users = new List<User>();
 
-        public static List<User> GetAll()
+        //public static List<User> GetAll()
+        //{
+        //    return users;
+        //}
+
+        //public static async Task<List<User>> GetAllAsync()
+        //{
+        //    return await Task.Run(() => users);
+        //}
+
+        //public static void AddUser(User user)
+        //{
+        //    users.Add(user);
+        //}
+
+        //public static async Task AddUserAsync(User user)
+        //{
+        //    await Task.Run(() => users.Add(user));
+        //}
+
+        public UserRepository(ChatContext chatContext)
         {
-            return users;
+            _chatContext = chatContext;
+        }
+        public async Task<List<User>> GetUsersAsync()
+        {
+            return await _chatContext.Users.ToListAsync();
         }
 
-        public static async Task<List<User>> GetAllAsync()
+        public async Task AddUsersAsync(User user)
         {
-            return await Task.Run(() => users);
-        }
-
-        public static void AddUser(User user)
-        {
-            users.Add(user);
-        }
-
-        public static async Task AddUserAsync(User user)
-        {
-            await Task.Run(() => users.Add(user));
+            await _chatContext.Users.AddAsync(user);
+            await _chatContext.SaveChangesAsync();
         }
     }
 }
