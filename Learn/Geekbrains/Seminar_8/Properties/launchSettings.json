@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Seminar_8": {
+      "commandName": "Project",
+      "commandLineArgs": "d:\\CSharp\\Learn\\Geekbrains\\Seminar_8 .txt Деньги",
+      "workingDirectory": "D:\\CSharp\\Learn\\Geekbrains\\Seminar_8",
+      "remoteDebugEnabled": false
+    }
+  }
+}

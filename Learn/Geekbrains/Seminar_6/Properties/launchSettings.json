@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Seminar_6": {
+      "commandName": "Project",
+      "commandLineArgs": "file1.txt file2.txt",
+      "workingDirectory": "D:\\CSharp\\Learn\\Geekbrains\\Seminar_8"
+    }
+  }
+}
