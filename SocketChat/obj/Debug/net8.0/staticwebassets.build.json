@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "DEvkDlIHs3B4/dCwLUQej6lNJtZ5Jw2mSksSim9oaYM=",
+  "Source": "SocketChat",
+  "BasePath": "_content/SocketChat",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "SocketChat\\wwwroot",
+      "Source": "SocketChat",
+      "ContentRoot": "D:\\CSharp\\Learn\\Geekbrains\\SocketChat\\wwwroot\\",
+      "BasePath": "_content/SocketChat",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\CSharp\\Learn\\Geekbrains\\SocketChat\\wwwroot\\index.html",
+      "SourceId": "SocketChat",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CSharp\\Learn\\Geekbrains\\SocketChat\\wwwroot\\",
+      "BasePath": "_content/SocketChat",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "D:\\CSharp\\Learn\\Geekbrains\\SocketChat\\wwwroot\\js\\signalr\\dist\\browser\\signalr.min.js",
+      "SourceId": "SocketChat",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\CSharp\\Learn\\Geekbrains\\SocketChat\\wwwroot\\",
+      "BasePath": "_content/SocketChat",
+      "RelativePath": "js/signalr/dist/browser/signalr.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\signalr\\dist\\browser\\signalr.min.js"
+    }
+  ]
+}

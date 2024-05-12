@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\CSharp\\Learn\\Geekbrains\\SocketChat\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\CSharp\\Learn\\Geekbrains\\SocketChat\\wwwroot\\js\\signalr\\dist\\browser\\signalr.min.js",
+      "PackagePath": "staticwebassets\\js\\signalr\\dist\\browser\\signalr.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SocketChat.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.SocketChat.props",
+      "PackagePath": "build\\SocketChat.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.SocketChat.props",
+      "PackagePath": "buildMultiTargeting\\SocketChat.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.SocketChat.props",
+      "PackagePath": "buildTransitive\\SocketChat.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

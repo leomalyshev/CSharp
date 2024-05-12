@@ -1,0 +1,6 @@
+@SocketChat_HostAddress = http://localhost:7019
+
+GET {{SocketChat_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
